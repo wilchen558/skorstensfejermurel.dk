@@ -1,20 +1,4 @@
-# gulp-boilerplate
-
-### Gulp plugins
-
-- sass
-- autoprefixer
-- sourcemaps
-- browserSync
-- useref
-- uglify
-- gulpIf
-- cssnano
-- imagemin
-- cache
-- del
-- runSequence
-- uncss
+# Skorstensfejermurel.dk
 
 ## Install
 
