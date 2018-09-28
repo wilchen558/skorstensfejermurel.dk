@@ -1,7 +1,5 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
-var autoprefixer = require('gulp-autoprefixer');
-var sourcemaps = require('gulp-sourcemaps');
 var browserSync = require('browser-sync');
 var useref = require('gulp-useref');
 var uglify = require('gulp-uglify');
@@ -11,7 +9,6 @@ var imagemin = require('gulp-imagemin');
 var cache = require('gulp-cache');
 var del = require('del');
 var runSequence = require('run-sequence');
-var uncss = require('gulp-uncss');
 
 // Development Tasks
 // -----------------
@@ -54,9 +51,6 @@ gulp.task('useref', function() {
         .pipe(useref())
         .pipe(gulpIf('*.js', uglify()))
         .pipe(gulpIf('*.css', cssnano()))
-        .pipe(gulpIf('*.css', uncss({
-            html: ['app/*.html']
-        })))
         .pipe(gulp.dest('dist'));
 });
 
